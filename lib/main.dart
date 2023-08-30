@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signin_signup/screens/home/main_home_screen.dart';
 import 'onBoarding/on_boarding.dart';
 
 void main() {
@@ -17,8 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        fontFamily: 'Poppins',
       ),
-      home: const MyHomePage(),
+      home: const MainHomeScreen(),
     );
   }
 }
