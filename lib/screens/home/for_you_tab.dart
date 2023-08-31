@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/wedgites/custom_categories_list.dart';
-import 'package:signin_signup/wedgites/custom_sub_title.dart';
+import 'package:get/get.dart';
+import 'package:signin_signup/screens/home/category_controller.dart';
 
 class ForYouTab extends StatelessWidget {
   const ForYouTab({
@@ -12,33 +12,11 @@ class ForYouTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          CustomSubTitle(
-            size: size,
-            subTitle: 'Recommended',
-            isSeeAll: true,
-          ),
-          // const CustomProductCard(
-          //     imagePath: 'assets/images/category_01.jpg',
-          //     productName: 'productName',
-          //     productDescription: 'dfgmd gdhfsd dfdhd',
-          //     price:245,
-          // ),
-          CustomSubTitle(
-            size: size,
-            subTitle: 'Categories',
-            isSeeAll: false,
-          ),
-          const CustomCategoryList(),
-          CustomSubTitle(
-            size: size,
-            subTitle: 'Favorite',
-            isSeeAll: true,
-          ),
-        ],
-      ),
+    return GetBuilder<CategoryController>(
+      init: Get.put(CategoryController()),
+        builder: (controller) {
+          return controller.currentView;
+        },
     );
   }
 }
