@@ -4,7 +4,7 @@ class WatchItem {
   final String watchDescription;
   final String price;
 
-  WatchItem(
+  const WatchItem(
       {required this.image,
       required this.watchName,
       required this.watchDescription,
