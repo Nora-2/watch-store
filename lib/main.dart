@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/screens/home/main_home_screen.dart';
+import 'package:signin_signup/screens/splash/splash_screen.dart';
 import 'onBoarding/on_boarding.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Poppins',
       ),
-      home: const MainHomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

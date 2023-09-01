@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:signin_signup/components/background.dart';
+import 'package:signin_signup/screens/home/main_home_screen.dart';
 import 'package:signin_signup/screens/signup.dart';
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
@@ -135,12 +136,13 @@ class SignIn extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * 0.05,
                           child: IconButton(
                             onPressed: () {
-   
+
     if (_formKey.currentState!.validate()) {
-     
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Processing Data')),
-      );
+
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text('Processing Data')),
+      // );
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainHomeScreen()));
     }
   },
                             icon: Icon(Icons.navigate_next_rounded),

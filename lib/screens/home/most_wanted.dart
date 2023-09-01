@@ -15,7 +15,7 @@ class MostWantedScreen extends StatelessWidget {
         image: 'assets/images/classic_01.png',
         watchName: 'Classic analog watch. . .',
         watchDescription:
-            'Analog wrist watch for men\n With a metallic and gold-tone stainless steel hands',
+            'Analog wrist watch for men\n With a metallic and gold-tone stainless steel ',
         price: '5640.99'),
     WatchItem(
         image: 'assets/images/women_03.png',

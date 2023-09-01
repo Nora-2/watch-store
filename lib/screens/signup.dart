@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signin_signup/components/background.dart';
+import 'package:signin_signup/screens/home/main_home_screen.dart';
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
 class SignUp extends StatelessWidget {
@@ -147,9 +148,11 @@ class SignUp extends StatelessWidget {
    
     if (_formKey.currentState!.validate()) {
      
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Processing Data')),
-      );
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text('Processing Data')),
+      // );
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MainHomeScreen()));
+
     }
   },
                             icon: Icon(Icons.navigate_next_rounded),

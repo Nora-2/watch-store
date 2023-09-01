@@ -33,19 +33,19 @@ class HomeForYouModel {
     WatchItem(
       image: '$imagePath/classic_01.png',
       watchName: 'Classic analog watch...',
-      watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone\nstainless steel hands',
+      watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone',
       price: '5640.99 L.E',
     ),
     WatchItem(
       image: '$imagePath/classic_02.png',
       watchName: 'Classic analog watch...',
-      watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone\nstainless steel hands',
+      watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone',
       price: '5640.99 L.E',
     ),
     WatchItem(
       image: '$imagePath/classic_01.png',
       watchName: 'Classic analog watch...',
-      watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone\nstainless steel hands',
+      watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone',
       price: '5640.99 L.E',
     ),
   ];

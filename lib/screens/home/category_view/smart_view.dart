@@ -37,7 +37,7 @@ class SmartView extends StatelessWidget {
             isSeeAll: true,
           ),
           CustomProductsList(size: size, categoryProducts: HomeForYouModel.favoritesSmartProducts),
-          SizedBox(height: size.height * 0.02),
+          const SizedBox(height: 75),
         ],
       ),
     );
