@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/model/most_wanted_watch_Item.dart';
+import 'package:signin_signup/model/watch_Item_model.dart';
 import 'package:signin_signup/wedgites/custom_container_product.dart';
 
 class MostWantedScreen extends StatelessWidget {

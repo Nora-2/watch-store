@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/model/home_foryou_model.dart';
+import 'package:signin_signup/constants/constants.dart';
+import 'package:signin_signup/model/watch_Item_model.dart';
 import 'package:signin_signup/wedgites/custom_categories_list.dart';
 import 'package:signin_signup/wedgites/custom_products_list.dart';
 import 'package:signin_signup/wedgites/custom_sub_title.dart';
@@ -14,6 +15,47 @@ class MenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<WatchItem> recommendedMenProducts = [
+      WatchItem(
+        image: '$imagePath/men_01.png',
+        watchName: 'Men\'s analog watch...',
+        watchDescription: 'Hand watch for men, analog,\nwith a brownish color, leather',
+        price: '4540.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/men_02.png',
+        watchName: 'Men\'s analog watch...',
+        watchDescription: 'Hand watch for men, analog,\nwith a brownish color, leather',
+        price: '4540.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/men_01.png',
+        watchName: 'Men\'s analog watch...',
+        watchDescription: 'Hand watch for men, analog,\nwith a brownish color, leather',
+        price: '4540.99 L.E',
+      ),
+    ];
+    const List<WatchItem> favoritesMenProducts = [
+      WatchItem(
+        image: '$imagePath/men_03.png',
+        watchName: 'Men\'s analog watch...',
+        watchDescription: 'Hand watch for men, analog,\nwith a brownish color, leather',
+        price: '4540.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/men_04.png',
+        watchName: 'Men\'s analog watch...',
+        watchDescription: 'Hand watch for men, analog,\nwith a brownish color, leather',
+        price: '4540.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/men_03.png',
+        watchName: 'Men\'s analog watch...',
+        watchDescription: 'Hand watch for men, analog,\nwith a brownish color, leather',
+        price: '4540.99 L.E',
+      ),
+    ];
+
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -23,7 +65,7 @@ class MenView extends StatelessWidget {
             subTitle: 'Recommended',
             isSeeAll: true,
           ),
-          CustomProductsList(size: size, categoryProducts: HomeForYouModel.recommendedMenProducts),
+          CustomProductsList(size: size, categoryProducts: recommendedMenProducts),
           SizedBox(height: size.height * 0.02),
           CustomSubTitle(
             size: size,
@@ -36,7 +78,7 @@ class MenView extends StatelessWidget {
             subTitle: 'Favorite',
             isSeeAll: true,
           ),
-          CustomProductsList(size: size, categoryProducts: HomeForYouModel.favoritesMenProducts),
+          CustomProductsList(size: size, categoryProducts: favoritesMenProducts),
           const SizedBox(height: 75),
         ],
       ),

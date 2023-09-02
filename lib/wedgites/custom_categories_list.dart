@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:signin_signup/model/home_foryou_model.dart';
+import 'package:signin_signup/constants/constants.dart';
 import 'package:signin_signup/screens/home/category_controller.dart';
 
 class CustomCategoryList extends StatelessWidget {
@@ -26,7 +26,7 @@ final Size size;
                   borderRadius: BorderRadius.circular(50),
                   onTap: () {
                       controller.selectedCategoryIndex = index;
-                      controller.getCategoryView(size, HomeForYouModel.categoriesName[index]);
+                      controller.getCategoryView(size, Constants.categoriesName[index]);
                       },
                   child: Stack(
                     alignment: Alignment.bottomCenter,
@@ -39,12 +39,12 @@ final Size size;
                         ),
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         child: Image.asset(
-                          HomeForYouModel.categoriesImg[index],
+                          Constants.categoriesImg[index],
                           fit: BoxFit.cover,
                         ),
                       ),
                       Text(
-                        HomeForYouModel.categoriesName[index],
+                        Constants.categoriesName[index],
                           style: Theme.of(context).textTheme.labelMedium!.copyWith(
                             fontSize: 12,
                             height: 3.0,
@@ -67,7 +67,7 @@ final Size size;
                 ),
               ],
             ),
-            itemCount: HomeForYouModel.categoriesImg.length,
+            itemCount: Constants.categoriesImg.length,
           ),
         );
       }

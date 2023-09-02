@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/model/home_foryou_model.dart';
+import 'package:signin_signup/constants/constants.dart';
+import 'package:signin_signup/model/watch_Item_model.dart';
 import 'package:signin_signup/wedgites/custom_categories_list.dart';
 import 'package:signin_signup/wedgites/custom_products_list.dart';
 import 'package:signin_signup/wedgites/custom_sub_title.dart';
@@ -14,6 +15,27 @@ class WomenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<WatchItem> womenProducts = [
+      WatchItem(
+        image: '$imagePath/women_01.png',
+        watchName: 'Women\'s analog...',
+        watchDescription: 'Analog wrist watch for women\nWith silver and gray leather hands',
+        price: '7640.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/women_02.png',
+        watchName: 'Women\'s analog...',
+        watchDescription: 'Analog wrist watch for women\nWith silver and gray leather hands',
+        price: '7640.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/women_03.png',
+        watchName: 'Women\'s analog...',
+        watchDescription: 'Analog wrist watch for women\nWith silver and gray leather hands',
+        price: '7640.99 L.E',
+      ),
+    ];
+
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -23,7 +45,7 @@ class WomenView extends StatelessWidget {
             subTitle: 'Recommended',
             isSeeAll: true,
           ),
-          CustomProductsList(size: size, categoryProducts: HomeForYouModel.womenProducts),
+          CustomProductsList(size: size, categoryProducts: womenProducts),
           SizedBox(height: size.height * 0.01),
           CustomSubTitle(
             size: size,
@@ -36,7 +58,7 @@ class WomenView extends StatelessWidget {
             subTitle: 'Favorite',
             isSeeAll: true,
           ),
-          CustomProductsList(size: size, categoryProducts: HomeForYouModel.womenProducts),
+          CustomProductsList(size: size, categoryProducts: womenProducts),
           const SizedBox(height: 75),
         ],
       ),

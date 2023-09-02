@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/model/most_wanted_watch_Item.dart';
+import 'package:signin_signup/model/watch_Item_model.dart';
 
 class MostWantedContainer extends StatelessWidget {
   MostWantedContainer({

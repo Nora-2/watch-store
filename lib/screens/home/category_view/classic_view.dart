@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/model/home_foryou_model.dart';
+import 'package:signin_signup/constants/constants.dart';
+import 'package:signin_signup/model/watch_Item_model.dart';
 import 'package:signin_signup/wedgites/custom_categories_list.dart';
 import 'package:signin_signup/wedgites/custom_products_list.dart';
 import 'package:signin_signup/wedgites/custom_sub_title.dart';
@@ -14,6 +15,27 @@ class ClassicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<WatchItem> classicProducts = [
+      WatchItem(
+        image: '$imagePath/classic_01.png',
+        watchName: 'Classic analog watch...',
+        watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone',
+        price: '5640.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/classic_02.png',
+        watchName: 'Classic analog watch...',
+        watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone',
+        price: '5640.99 L.E',
+      ),
+      WatchItem(
+        image: '$imagePath/classic_01.png',
+        watchName: 'Classic analog watch...',
+        watchDescription: 'Analog wrist watch for men\nWith a metallic and gold-tone',
+        price: '5640.99 L.E',
+      ),
+    ];
+
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -23,7 +45,7 @@ class ClassicView extends StatelessWidget {
             subTitle: 'Recommended',
             isSeeAll: true,
           ),
-          CustomProductsList(size: size, categoryProducts: HomeForYouModel.classicProducts),
+          CustomProductsList(size: size, categoryProducts: classicProducts),
           SizedBox(height: size.height * 0.02),
           CustomSubTitle(
             size: size,
@@ -36,7 +58,7 @@ class ClassicView extends StatelessWidget {
             subTitle: 'Favorite',
             isSeeAll: true,
           ),
-          CustomProductsList(size: size, categoryProducts: HomeForYouModel.classicProducts),
+          CustomProductsList(size: size, categoryProducts: classicProducts),
           const SizedBox(height: 75),
         ],
       ),
