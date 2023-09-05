@@ -1,181 +1,312 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:signin_signup/components/background.dart';
+import 'package:lottie/lottie.dart';
+import 'package:signin_signup/homelayout.dart';
+import 'package:signin_signup/screens/profile.dart';
+
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
 class SignUp extends StatelessWidget {
-   SignUp({super.key});
-  final _formKey = GlobalKey<FormState>();
+  SignUp({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
     return Scaffold(
-        body: Background(
-      child: SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+            SizedBox(height: 10),
+            Lottie.asset(
+              'assets/images/login2.json',
+              key: Key('${Random().nextInt(999999999)}'),
+              width: 180,
+              height: 180,
             ),
-            const Text(
-              "Create account",
-              style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: Container(
+                width: double.infinity,
+                child: Text(
+                  textAlign: TextAlign.center,
+                  "Create New Account",
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.07,
+              height: 10,
             ),
             Form(
-                 key: _formKey,
+              key: _formKey,
               child: Column(
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 30, right: 30),
-                    child: Material(
-                        elevation: 4,
-                        borderRadius: BorderRadius.circular(
-                            MediaQuery.of(context).size.width * 0.1),
-                        child: customformfield(
-                          hint: "Username",
-                          preicon: Icon(
-                            Icons.person,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 30,
+                        ),
+                        child: Container(
+                          width: 215,
+                          child: Material(
+                            elevation: 4,
+                            borderRadius: BorderRadius.circular(18),
+                            child: customformfield(
+                              hint: "First Name",
+                              preicon: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Image.asset(
+                                  'assets/images/black-male-user-symbol.png',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                              text: TextInputType.text,
+                              massege: 'Please enter a valid Name',
+                            ),
                           ),
-                          text: TextInputType.name,
-                        )),
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.035,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 10, right: 30),
+                        child: Container(
+                          width: 215,
+                          child: Material(
+                            elevation: 4,
+                            borderRadius: BorderRadius.circular(18),
+                            child: customformfield(
+                              hint: 'Second Name',
+                              preicon: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Image.asset(
+                                  'assets/images/black-male-user-symbol.png',
+                                  width: 20,
+                                  height: 20,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                              text: TextInputType.visiblePassword,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02,
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 30, right: 30),
+                    child: Material(
+                      elevation: 4,
+                      borderRadius: BorderRadius.circular(18),
+                      child: customformfield(
+                        hint: "Pnone Number",
+                        preicon: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Image.asset(
+                            'assets/images/mobile-button 1.png',
+                            width: 20,
+                            height: 20,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        text: TextInputType.text,
+                        massege: 'Please enter a valid Name',
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.035,
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 30, right: 30),
                     child: Material(
                         elevation: 4,
-                        borderRadius: BorderRadius.circular(
-                            MediaQuery.of(context).size.width * 0.1),
+                        borderRadius: BorderRadius.circular(18),
                         child: customformfield(
-                          hint: 'Password',
-                          preicon: Icon(
-                            Icons.lock,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                          hint: 'Email',
+                          preicon: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset(
+                              'assets/images/email 1.png',
+                              width: 20,
+                              height: 20,
+                              fit: BoxFit.fill,
+                            ),
                           ),
                           text: TextInputType.visiblePassword,
                         )),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02,
+                    height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 30, right: 30),
                     child: Material(
                         elevation: 4,
-                        borderRadius: BorderRadius.circular(
-                            MediaQuery.of(context).size.width * 0.1),
+                        borderRadius: BorderRadius.circular(18),
                         child: customformfield(
-                          hint: "Email",
-                          preicon: Icon(
-                            Icons.email,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                          hint: 'Password',
+                          suffix: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset(
+                              'assets/images/eye.png',
+                              width: 20,
+                              height: 20,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                          text: TextInputType.emailAddress,
-                          sign: '@',
-                          massege: 'Please enter a valid email',
-                        ),),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 30, right: 30),
-                    child: Material(
-                        elevation: 4,
-                        borderRadius: BorderRadius.circular(
-                            MediaQuery.of(context).size.width * 0.1),
-                        child: customformfield(
-                          hint: "Mobile",
-                          preicon: Icon(
-                            Icons.lock,
-                            size: MediaQuery.of(context).size.width * 0.06,
-                            color: Color.fromARGB(255, 225, 121, 243),
+                          preicon: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset(
+                              'assets/images/key.png',
+                              width: 20,
+                              height: 20,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                          text: TextInputType.phone,
+                          text: TextInputType.visiblePassword,
                         )),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.10,
+                    height: MediaQuery.of(context).size.height * 0.03,
                   ),
+                  SizedBox(height: 5),
                   Padding(
-                    padding: const EdgeInsets.only(right: 32),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          "Sign up",
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                    padding: const EdgeInsets.only(right: 32, left: 32),
+                    child: Material(
+                      elevation: 4,
+                      borderRadius: BorderRadius.circular(
+                        MediaQuery.of(context).size.height * 0.1,
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(
+                            MediaQuery.of(context).size.height * 0.01,
                           ),
                         ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.03,
-                        ),
-                      Material(
-                        elevation: 4,
-                        borderRadius: BorderRadius.circular(
-                          MediaQuery.of(context).size.height * 0.1,
-                        ),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 255, 230, 85),
-                                Color.fromARGB(255, 176, 74, 166),
-                              ],
-                              begin: Alignment.bottomRight,
-                              end: Alignment.topLeft,
+                        child: GestureDetector(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(30),
                             ),
-                            borderRadius: BorderRadius.circular(
-                              MediaQuery.of(context).size.height * 0.1,
+                            width: 370,
+                            height: 50,
+                            child: Center(
+                              child: Text(
+                                "Create",
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white),
+                              ),
                             ),
                           ),
-                          width: MediaQuery.of(context).size.width * 0.18,
-                          height: MediaQuery.of(context).size.height * 0.05,
-                          child: IconButton(
-                            onPressed: () {
-   
-    if (_formKey.currentState!.validate()) {
-     
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Processing Data')),
-      );
-    }
-  },
-                            icon: Icon(Icons.navigate_next_rounded),
-                          ),
+                          onTap: () {
+                            if (_formKey.currentState!.validate()) {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomeLayout()));
+                            }
+                          },
                         ),
                       ),
-                      ],
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    height: 10,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Already Have An Account ?",
+                        style: TextStyle(fontSize: 18, fontFamily: 'Poppins'),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return profile();
+                              },
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Login Now",
+                          style: TextStyle(
+                              fontFamily: 'Poppins',
+                              decorationColor: Color(0xff0000FF),
+                              decoration: TextDecoration.underline,
+                              decorationThickness: 2.0,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff0000FF)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
                   Text(
-                    "Or create account using social media",
-                    style: TextStyle(fontSize: 14),
+                    'Sign Up With',
+                    style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        fontSize: 18),
                   ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.02,
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [Image.asset("assets/images/icons.png")],
                   ),
-                  Image.asset("assets/images/icons.png")
                 ],
               ),
             ),
           ],
         ),
       ),
-    ));
+    );
   }
 }
+
+
+// bool showPassword=false;
+// _FormField() {
+//     return TextFormField(
+//        obscureText: !showPassword,
+//       validator: (value) {
+//         if (value!.isEmpty) {
+//           print("test");
+//         }
+//       },
+//       decoration: InputDecoration(
+// suffixIcon:IconButton(icon:showPassword?Icon(Icons.lock):Icon(Icons.lock_open),
+// onPressed:(){
+// setState(() {
+//       showPassword=!showPassword;
+//    });
+// }
+// )
+//   ),
+//     );
+//   }

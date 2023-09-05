@@ -8,13 +8,15 @@ class customformfield extends StatelessWidget {
   customformfield({
     required this.hint,
     required this.preicon,
+     this.suffix,
     this.text,
     this.sign,
     this.massege,
     super.key,
   });
   final String hint;
-  final Icon preicon;
+  final Widget preicon;
+  final Widget? suffix;
   final TextInputType? text;
   final String? sign;
   final String? massege;
