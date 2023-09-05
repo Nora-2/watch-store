@@ -21,7 +21,7 @@ class HomeLayout extends StatelessWidget {
         builder: (context, state) => Scaffold(
           backgroundColor: Colors.white,
          
-          
+                                             
           body: HomecubitCubit.get(context)
               .Screens[HomecubitCubit.get(context).indexBottomNavBar],
           
@@ -30,6 +30,7 @@ class HomeLayout extends StatelessWidget {
         ),
         listener: (context, state) {},
       ),
+
     );
   }
 }
