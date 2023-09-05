@@ -2,8 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:signin_signup/components/background.dart';
+<<<<<<< HEAD
 import 'package:signin_signup/homelayout.dart';
 
+=======
+import 'package:signin_signup/screens/home/main_home_screen.dart';
+>>>>>>> aa2ccbcf1bb9a117ea39cbe7b54707ff418ca7a9
 import 'package:signin_signup/screens/signup.dart';
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
@@ -143,7 +147,11 @@ class SignIn extends StatelessWidget {
       // ScaffoldMessenger.of(context).showSnackBar(
       //   const SnackBar(content: Text('Processing Data')),
       // );
+<<<<<<< HEAD
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeLayout()));
+=======
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainHomeScreen()));
+>>>>>>> aa2ccbcf1bb9a117ea39cbe7b54707ff418ca7a9
     }
   },
                             icon: Icon(Icons.navigate_next_rounded),

@@ -1,10 +1,15 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:lottie/lottie.dart';
 import 'package:signin_signup/homelayout.dart';
 import 'package:signin_signup/screens/profile.dart';
 
+=======
+import 'package:signin_signup/components/background.dart';
+import 'package:signin_signup/screens/home/main_home_screen.dart';
+>>>>>>> aa2ccbcf1bb9a117ea39cbe7b54707ff418ca7a9
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
 class SignUp extends StatelessWidget {
@@ -216,6 +221,7 @@ class SignUp extends StatelessWidget {
                               ),
                             ),
                           ),
+<<<<<<< HEAD
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
                               Navigator.pushReplacement(
@@ -224,6 +230,24 @@ class SignUp extends StatelessWidget {
                                       builder: (context) => HomeLayout()));
                             }
                           },
+=======
+                          width: MediaQuery.of(context).size.width * 0.18,
+                          height: MediaQuery.of(context).size.height * 0.05,
+                          child: IconButton(
+                            onPressed: () {
+   
+    if (_formKey.currentState!.validate()) {
+     
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text('Processing Data')),
+      // );
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MainHomeScreen()));
+
+    }
+  },
+                            icon: Icon(Icons.navigate_next_rounded),
+                          ),
+>>>>>>> aa2ccbcf1bb9a117ea39cbe7b54707ff418ca7a9
                         ),
                       ),
                     ),
