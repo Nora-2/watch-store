@@ -9,7 +9,7 @@ final Size size;
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<CategoryController>(
+    return GetBuilder(
       init: Get.put(CategoryController()),
       builder: (controller) {
         return SizedBox(

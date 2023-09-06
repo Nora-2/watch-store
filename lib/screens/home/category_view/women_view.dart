@@ -15,7 +15,7 @@ class WomenView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<WatchItem> womenProducts = [
+    List<WatchItem> womenProducts = [
       WatchItem(
         image: '$imagePath/women_01.png',
         watchName: 'Women\'s analog...',

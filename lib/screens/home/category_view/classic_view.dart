@@ -15,7 +15,7 @@ class ClassicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<WatchItem> classicProducts = [
+    List<WatchItem> classicProducts = [
       WatchItem(
         image: '$imagePath/classic_01.png',
         watchName: 'Classic analog watch...',

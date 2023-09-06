@@ -3,8 +3,6 @@ import 'package:signin_signup/homelayout.dart';
 
 import 'package:signin_signup/screens/home/main_home_screen.dart';
 
-
-
 import 'cubit_home/homecubit_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,10 +38,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Poppins',
       ),
-
-      // home: const HomeLayout(),
-
-      home: const HomeLayout(),
+      home: const MainHomeScreen(),
 
     ));
   }
