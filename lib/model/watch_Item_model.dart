@@ -3,10 +3,12 @@ class WatchItem {
   final String watchName;
   final String watchDescription;
   final String price;
-
-  const WatchItem(
+  bool isFavorite;
+  WatchItem(
       {required this.image,
       required this.watchName,
       required this.watchDescription,
-      required this.price});
+      required this.price,
+      this.isFavorite = false
+      });
 }

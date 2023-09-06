@@ -12,7 +12,7 @@ class ForYouTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<CategoryController>(
+    return GetBuilder(
       init: Get.put(CategoryController()),
         builder: (controller) {
           return controller.currentView;
