@@ -1,14 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:signin_signup/wedgites/custom_bottom_navbar.dart';
-
-
-
-
 import '../cubit_home/homecubit_cubit.dart';
-
-
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({Key? key}) : super(key: key);
