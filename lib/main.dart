@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:signin_signup/homelayout.dart';
+
 import 'package:signin_signup/screens/home/main_home_screen.dart';
+
 import 'cubit_home/homecubit_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -22,6 +24,12 @@ class MyApp extends StatelessWidget {
       
     child:MaterialApp(
 
+    routes: {
+        MainHomeScreen.id:(context) => MainHomeScreen(),
+          HomeLayout.id:(context)=>HomeLayout(),
+        },
+        initialRoute:  HomeLayout.id,
+
        title: 'Watch Store',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -31,6 +39,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: const MainHomeScreen(),
+
     ));
   }
 }

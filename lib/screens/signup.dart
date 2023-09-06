@@ -1,9 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+
+
 import 'package:lottie/lottie.dart';
 import 'package:signin_signup/homelayout.dart';
 import 'package:signin_signup/screens/profile.dart';
+
+
+
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
 class SignUp extends StatelessWidget {
@@ -19,6 +24,15 @@ class SignUp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.only(left: 30,right: 420),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                }, icon: Icon(Icons.arrow_back),
+                
+              ),
+            ),
             Lottie.asset(
               'assets/images/login2.json',
               key: Key('${Random().nextInt(999999999)}'),

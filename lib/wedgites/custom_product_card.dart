@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:signin_signup/model/watch_Item_model.dart';
 import 'package:signin_signup/screens/product_details/product_details_screen.dart';
 
+// ignore: must_be_immutable
 class CustomProductCard extends StatelessWidget {
   Size size;
   WatchItem item;
