@@ -12,16 +12,17 @@ import '../cubit_home/homecubit_cubit.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({Key? key}) : super(key: key);
-
+ static String id = 'HomeLayout';
   @override
   Widget build(BuildContext context) {
     return BlocProvider.value(
+
       value: BlocProvider.of<HomecubitCubit>(context),
       child: BlocConsumer<HomecubitCubit, HomecubitState>(
         builder: (context, state) => Scaffold(
           backgroundColor: Colors.white,
          
-                                             
+          
           body: HomecubitCubit.get(context)
               .Screens[HomecubitCubit.get(context).indexBottomNavBar],
           
@@ -30,7 +31,6 @@ class HomeLayout extends StatelessWidget {
         ),
         listener: (context, state) {},
       ),
-
     );
   }
 }

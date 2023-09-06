@@ -13,39 +13,44 @@ class profile extends StatelessWidget {
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
-      
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            
             SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 420),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).popAndPushNamed('HomeLayout');
+                },
+                icon: Icon(Icons.arrow_back),
+              ),
+            ),
             Lottie.asset(
               'assets/images/login2.json',
               key: Key('${Random().nextInt(999999999)}'),
               width: 210,
               height: 210,
             ),
-           
-             Padding(
-               padding: const EdgeInsets.only(left: 30, right: 30),
-               child: Container(
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: Container(
                 width: double.infinity,
-                 child: Text(
+                child: Text(
                   textAlign: TextAlign.center,
-                            "Login Now",
-                            style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            color: Colors.black
-                            ),
-                          ),
-               ),
-             ), SizedBox(
+                  "Login Now",
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
+              ),
+            ),
+            SizedBox(
               height: 10,
-              
             ),
             Form(
               key: _formKey,
@@ -59,14 +64,13 @@ class profile extends StatelessWidget {
                       child: customformfield(
                         hint: "Username or Phone Number",
                         preicon: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset(
-                  'assets/images/black-male-user-symbol.png',
-                  width: 20,
-                  height: 20,
-                  fit: BoxFit.fill,
-                ),
-              
+                          padding: const EdgeInsets.all(10.0),
+                          child: Image.asset(
+                            'assets/images/black-male-user-symbol.png',
+                            width: 20,
+                            height: 20,
+                            fit: BoxFit.fill,
+                          ),
                         ),
                         text: TextInputType.text,
                         massege: 'Please enter a valid Name',
@@ -84,24 +88,23 @@ class profile extends StatelessWidget {
                         child: customformfield(
                           hint: 'Password',
                           suffix: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset(
-                  'assets/images/eye.png',
-                  width: 20,
-                  height: 20,
-                  fit: BoxFit.fill,
-                ),
-              ),
-                          preicon:  Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Image.asset(
-                  'assets/images/key.png',
-                  width: 20,
-                  height: 20,
-                  fit: BoxFit.fill,
-                ),
-              
-                        ),
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset(
+                              'assets/images/eye.png',
+                              width: 20,
+                              height: 20,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          preicon: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Image.asset(
+                              'assets/images/key.png',
+                              width: 20,
+                              height: 20,
+                              fit: BoxFit.fill,
+                            ),
+                          ),
                           text: TextInputType.visiblePassword,
                         )),
                   ),
@@ -124,7 +127,7 @@ class profile extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   Padding(
-                    padding: const EdgeInsets.only(right: 32,left: 32),
+                    padding: const EdgeInsets.only(right: 32, left: 32),
                     child: Material(
                       elevation: 4,
                       borderRadius: BorderRadius.circular(
@@ -156,7 +159,6 @@ class profile extends StatelessWidget {
                           ),
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
-                              
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
@@ -167,7 +169,9 @@ class profile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -175,7 +179,9 @@ class profile extends StatelessWidget {
                         "New At Watch X ?",
                         style: TextStyle(fontSize: 18, fontFamily: 'Poppins'),
                       ),
-                      SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
@@ -214,7 +220,6 @@ class profile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [Image.asset("assets/images/icons.png")],
                   ),
-                 
                 ],
               ),
             ),

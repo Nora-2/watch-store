@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../cubit_home/homecubit_cubit.dart';
+
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
     super.key,
@@ -52,7 +54,12 @@ class CustomBottomNavBar extends StatelessWidget {
                 icon: Image.asset('assets/images/cart_icon.png'),
                 label: 'Cart',
               ),
+              
             ],
+            onTap: (value) {
+               HomecubitCubit.get(context).changeIndexBottom(value);
+                   
+            },
           ),
         ),
       ),
