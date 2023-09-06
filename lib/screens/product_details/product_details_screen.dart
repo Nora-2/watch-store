@@ -53,12 +53,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     ProductDetailsCubit.get(context).changeFavorites(widget.item);
                                   },
                                   icon: widget.item.isFavorite ?
-                                   SvgPicture.asset('assets/images/heart_check.svg') :
-                                  SvgPicture.asset('assets/images/heart.svg'),
+                                   SvgPicture.asset('assets/images/heart_check.svg',width: 30,) :
+                                  SvgPicture.asset('assets/images/heart.svg',width: 30,),
                                 ),
-                              ),
-                              SizedBox(
-                                height: size.height * 0.005,
                               ),
                               Align(
                                 alignment: Alignment.topRight,
@@ -67,7 +64,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                   icon: const Icon(
                                     Icons.share,
                                     color: Colors.black,
-                                    size: 35,
+                                    size: 30,
                                   ),
                                 ),
                               ),

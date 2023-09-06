@@ -20,7 +20,7 @@ class HomeLayout extends StatelessWidget {
               .Screens[HomecubitCubit.get(context).indexBottomNavBar],
           
               
-          bottomNavigationBar:  CustomBottomNavBar()
+          bottomNavigationBar: const CustomBottomNavBar()
         ),
         listener: (context, state) {},
       ),
