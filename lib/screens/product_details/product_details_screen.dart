@@ -160,6 +160,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         backgroundColor: Colors.black,
                         text: 'Add to cart',
                         textColor: Colors.white,
+                        onPressed: () {},
                       ),
                       SizedBox(
                         height: size.height * 0.01,
@@ -169,6 +170,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         backgroundColor: Colors.white,
                         text: 'Buy Now',
                         textColor: Colors.black,
+                        onPressed: () {},
                       ),
                       SizedBox(
                         height: size.height * 0.02,

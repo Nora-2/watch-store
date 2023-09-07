@@ -44,6 +44,7 @@ dependencies:
   flutter_svg: ^2.0.7
 
   firebase_core: ^2.15.1
+  flutter_otp_text_field: ^1.1.1
   
 dev_dependencies:
   flutter_test:
