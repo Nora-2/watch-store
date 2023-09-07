@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:lottie/lottie.dart';
 import 'package:signin_signup/homelayout.dart';
+import 'package:signin_signup/screens/phone_verification/phone_verification_screen.dart';
 import 'package:signin_signup/screens/profile.dart';
 
 
@@ -230,11 +231,12 @@ class SignUp extends StatelessWidget {
                             ),
                           ),
                           onTap: () {
+                            // if(true){
                             if (_formKey.currentState!.validate()) {
-                              Navigator.pushReplacement(
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => HomeLayout()));
+                                      builder: (context) => const PhoneVerificationScreen()));
                             }
                           },
                         ),

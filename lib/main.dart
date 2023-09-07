@@ -12,15 +12,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => HomecubitCubit()),
         ],
-      
-    child:MaterialApp(
+
+    child: MaterialApp(
 
     routes: {
         MainHomeScreen.id:(context) => const MainHomeScreen(),
@@ -37,8 +36,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       home: const HomeLayout(),
-
-    ));
+    ),
+    );
   }
 }
 
