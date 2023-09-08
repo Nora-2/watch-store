@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:signin_signup/homelayout.dart';
 
 import 'package:signin_signup/screens/home/main_home_screen.dart';
+import 'package:signin_signup/screens/profiledetailes.dart';
+import 'package:signin_signup/screens/profileview.dart';
 
 
 
@@ -29,7 +31,11 @@ class MyApp extends StatelessWidget {
     routes: {
         MainHomeScreen.id:(context) => MainHomeScreen(),
           HomeLayout.id:(context)=>HomeLayout(),
+           profileView.id:(context) => profileView(),
+          profiledetailes.id:(context) => profiledetailes()
+        
         },
+
         initialRoute:  HomeLayout.id,
 
        title: 'Watch Store',

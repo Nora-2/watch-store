@@ -2,18 +2,23 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-
 import 'package:lottie/lottie.dart';
-import 'package:signin_signup/homelayout.dart';
-import 'package:signin_signup/screens/profile.dart';
+
+import 'package:signin_signup/model/user.dart';
+import 'package:signin_signup/screens/profiledetailes.dart';
 
 
 
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
+// ignore: must_be_immutable
 class SignUp extends StatelessWidget {
   SignUp({super.key});
-
+TextEditingController FName  = new TextEditingController();
+TextEditingController LName  = new TextEditingController();
+TextEditingController pass  =  new TextEditingController();
+TextEditingController phone  = new TextEditingController();
+TextEditingController email  = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
@@ -73,6 +78,7 @@ class SignUp extends StatelessWidget {
                             elevation: 4,
                             borderRadius: BorderRadius.circular(18),
                             child: customformfield(
+                              controller: FName,
                               hint: "First Name",
                               preicon: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -100,6 +106,7 @@ class SignUp extends StatelessWidget {
                             elevation: 4,
                             borderRadius: BorderRadius.circular(18),
                             child: customformfield(
+                              controller: LName,
                               hint: 'Second Name',
                               preicon: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -126,6 +133,7 @@ class SignUp extends StatelessWidget {
                       elevation: 4,
                       borderRadius: BorderRadius.circular(18),
                       child: customformfield(
+                        controller: phone,
                         hint: "Pnone Number",
                         preicon: Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -150,6 +158,7 @@ class SignUp extends StatelessWidget {
                         elevation: 4,
                         borderRadius: BorderRadius.circular(18),
                         child: customformfield(
+                          controller: email,
                           hint: 'Email',
                           preicon: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -172,6 +181,7 @@ class SignUp extends StatelessWidget {
                         elevation: 4,
                         borderRadius: BorderRadius.circular(18),
                         child: customformfield(
+                          controller: pass,
                           hint: 'Password',
                           suffix: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -231,10 +241,13 @@ class SignUp extends StatelessWidget {
                           ),
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => HomeLayout()));
+                               Navigator.pushNamed(context,profiledetailes.id ,
+                        arguments: User(
+                            firstName: FName.text.toString(),
+                            secondName: LName.text.toString(),
+                            Email:email.text.toString(),
+                            Password:pass.text.toString(),
+                            Phone:phone.text.toString()));
                             }
                           },
                         ),
@@ -256,14 +269,8 @@ class SignUp extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return profile();
-                              },
-                            ),
-                          );
+                           
+                  ;
                         },
                         child: Text(
                           "Login Now",

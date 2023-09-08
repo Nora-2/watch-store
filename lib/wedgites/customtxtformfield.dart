@@ -8,6 +8,7 @@ class customformfield extends StatelessWidget {
     this.sign,
     this.massege,
     this.suffix,
+    required this.controller,
     super.key,
   });
   final String hint;
@@ -16,10 +17,12 @@ class customformfield extends StatelessWidget {
   final String? sign;
   final String? massege;
   final Widget? suffix;
+  final TextEditingController?controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       maxLines: 1,
+      controller:controller ,
       decoration: InputDecoration(
      
         hintText: hint,

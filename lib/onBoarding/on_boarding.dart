@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:signin_signup/components/background.dart';
-import 'package:signin_signup/screens/signin.dart';
+import 'package:signin_signup/homelayout.dart';
+
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../model/onboarding model.dart';
 import '../wedgites/pageviewitem.dart';
@@ -61,7 +62,7 @@ class _OnBoardingState extends State<OnBoarding> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SignIn()));
+                                builder: (context) => HomeLayout()));
                       },
                     ),
                     SizedBox(
@@ -87,7 +88,7 @@ class _OnBoardingState extends State<OnBoarding> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SignIn()));
+                                    builder: (context) => HomeLayout()));
                           }
                         },
                         child: Icon(

@@ -1,16 +1,27 @@
+
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:signin_signup/homelayout.dart';
+import 'package:signin_signup/model/user.dart';
+
+import 'package:signin_signup/screens/profiledetailes.dart';
 import 'package:signin_signup/screens/signup.dart';
 import 'package:signin_signup/wedgites/customtxtformfield.dart';
 
+// ignore: must_be_immutable
 class profile extends StatelessWidget {
-  const profile({super.key});
+  profile({
+    super.key,
+  });
+  TextEditingController Name = new TextEditingController();
+  TextEditingController pass = new TextEditingController();
 
+  static String id = 'profile';
   @override
   Widget build(BuildContext context) {
+    User user=User(firstName: 'Nora', secondName: 'Mohamed', Email: 'nora988@gmail.com', Phone: '012727889');
+    
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
       body: SingleChildScrollView(
@@ -62,6 +73,7 @@ class profile extends StatelessWidget {
                       elevation: 4,
                       borderRadius: BorderRadius.circular(18),
                       child: customformfield(
+                        controller: Name,
                         hint: "Username or Phone Number",
                         preicon: Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -86,6 +98,7 @@ class profile extends StatelessWidget {
                         elevation: 4,
                         borderRadius: BorderRadius.circular(18),
                         child: customformfield(
+                          controller: pass,
                           hint: 'Password',
                           suffix: Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -159,10 +172,16 @@ class profile extends StatelessWidget {
                           ),
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
-                              Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => HomeLayout()));
+                              Navigator.pushNamed(
+                                context,
+                                profiledetailes.id,
+                                arguments: User(
+                                    firstName: user.firstName,
+                                    secondName: user.secondName,
+                                    Email: user.Email,
+                                    Password: user.Password,
+                                    Phone: user.Phone),
+                              );
                             }
                           },
                         ),
