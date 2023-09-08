@@ -20,7 +20,7 @@ class profile extends StatelessWidget {
   static String id = 'profile';
   @override
   Widget build(BuildContext context) {
-    User user=User(firstName: 'Nora', secondName: 'Mohamed', Email: 'nora988@gmail.com', Phone: '012727889');
+    User user=User(firstName: 'Ahmed', secondName: 'Mohamed', Email: 'ahmed988@gmail.com', Phone: '012727889');
     
     final _formKey = GlobalKey<FormState>();
     return Scaffold(

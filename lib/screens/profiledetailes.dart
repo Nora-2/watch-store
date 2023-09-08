@@ -8,7 +8,7 @@ class profiledetailes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    User user=User(firstName: 'Nora', secondName: 'Mohamed', Email: 'nora988@gmail.com', Phone: '012727889');
+    User user=User(firstName: 'Ahmed', secondName: 'Mohamed', Email: 'ahmed988@gmail.com', Phone: '012727889');
     
     return Scaffold(
       backgroundColor: Colors.black,
