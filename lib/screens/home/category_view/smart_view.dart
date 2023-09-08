@@ -15,7 +15,7 @@ class SmartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<WatchItem> recommendedSmartProducts = [
+    List<WatchItem> recommendedSmartProducts = [
       WatchItem(
         image: '$imagePath/smart_01.png',
         watchName: 'Smart watch for. . .',
@@ -35,7 +35,7 @@ class SmartView extends StatelessWidget {
         price: '2075.99 L.E',
       ),
     ];
-    const List<WatchItem> favoritesSmartProducts = [
+    List<WatchItem> favoritesSmartProducts = [
       WatchItem(
         image: '$imagePath/smart_04.png',
         watchName: 'Smart watch for. . .',

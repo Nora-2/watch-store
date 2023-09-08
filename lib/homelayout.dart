@@ -8,9 +8,8 @@ class HomeLayout extends StatelessWidget {
  static String id = 'HomeLayout';
   @override
   Widget build(BuildContext context) {
-    return BlocProvider.value(
-
-      value: BlocProvider.of<HomecubitCubit>(context),
+    return BlocProvider(
+      create: (context) => HomecubitCubit(),
       child: BlocConsumer<HomecubitCubit, HomecubitState>(
         builder: (context, state) => Scaffold(
           backgroundColor: Colors.white,
@@ -20,7 +19,7 @@ class HomeLayout extends StatelessWidget {
               .Screens[HomecubitCubit.get(context).indexBottomNavBar],
           
               
-          bottomNavigationBar:  CustomBottomNavBar()
+          bottomNavigationBar: const CustomBottomNavBar()
         ),
         listener: (context, state) {},
       ),

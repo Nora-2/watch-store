@@ -15,7 +15,7 @@ class KidsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const List<WatchItem> recommendedKidsProducts = [
+    List<WatchItem> recommendedKidsProducts = [
       WatchItem(
         image: '$imagePath/kids_01.png',
         watchName: 'Children\'s watch...',
@@ -35,7 +35,7 @@ class KidsView extends StatelessWidget {
         price: '640.99 L.E',
       ),
     ];
-    const List<WatchItem> favoritesKidsProducts = [
+    List<WatchItem> favoritesKidsProducts = [
       WatchItem(
         image: '$imagePath/kids_03.png',
         watchName: 'Children\'s watch...',

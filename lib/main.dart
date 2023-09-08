@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:signin_signup/homelayout.dart';
-
 import 'package:signin_signup/screens/home/main_home_screen.dart';
+
 import 'package:signin_signup/screens/profiledetailes.dart';
 import 'package:signin_signup/screens/profileview.dart';
+
 
 
 
@@ -18,22 +19,23 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => HomecubitCubit()),
         ],
-      
-    child:MaterialApp(
+
+    child: MaterialApp(
 
     routes: {
+
         MainHomeScreen.id:(context) => MainHomeScreen(),
           HomeLayout.id:(context)=>HomeLayout(),
            profileView.id:(context) => profileView(),
           profiledetailes.id:(context) => profiledetailes()
-        
+
+
         },
 
         initialRoute:  HomeLayout.id,
@@ -46,12 +48,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Poppins',
       ),
-
-      // home: const HomeLayout(),
-
       home: const HomeLayout(),
-
-    ));
+    ),
+    );
   }
 }
 

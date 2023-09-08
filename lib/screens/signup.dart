@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'package:lottie/lottie.dart';
 
-import 'package:signin_signup/model/user.dart';
-import 'package:signin_signup/screens/profiledetailes.dart';
+
+import 'package:signin_signup/screens/phone_verification/phone_verification_screen.dart';
+
+
+
 
 
 
@@ -240,14 +243,22 @@ TextEditingController email  = new TextEditingController();
                             ),
                           ),
                           onTap: () {
+                            // if(true){
                             if (_formKey.currentState!.validate()) {
-                               Navigator.pushNamed(context,profiledetailes.id ,
-                        arguments: User(
-                            firstName: FName.text.toString(),
-                            secondName: LName.text.toString(),
-                            Email:email.text.toString(),
-                            Password:pass.text.toString(),
-                            Phone:phone.text.toString()));
+// <<<<<<< HEAD
+//                                Navigator.pushNamed(context,profiledetailes.id ,
+//                         arguments: User(
+//                             firstName: FName.text.toString(),
+//                             secondName: LName.text.toString(),
+//                             Email:email.text.toString(),
+//                             Password:pass.text.toString(),
+//                             Phone:phone.text.toString()));
+
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const PhoneVerificationScreen()));
+
                             }
                           },
                         ),
