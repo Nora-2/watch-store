@@ -46,6 +46,11 @@ dependencies:
   firebase_core: ^2.15.1
   flutter_otp_text_field: ^1.1.1
   intl_phone_field: ^3.2.0
+
+
+  font_awesome_flutter: ^9.2.0
+  
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
