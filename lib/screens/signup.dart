@@ -22,9 +22,12 @@ TextEditingController LName  = new TextEditingController();
 TextEditingController pass  =  new TextEditingController();
 TextEditingController phone  = new TextEditingController();
 TextEditingController email  = new TextEditingController();
+
+  static String id = 'RegisterPage';
   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
+  
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

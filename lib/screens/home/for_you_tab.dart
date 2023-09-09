@@ -9,6 +9,7 @@ class ForYouTab extends StatelessWidget {
   });
 
   final Size size;
+  
 
   @override
   Widget build(BuildContext context) {

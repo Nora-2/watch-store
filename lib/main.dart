@@ -4,6 +4,7 @@ import 'package:signin_signup/screens/home/main_home_screen.dart';
 
 import 'package:signin_signup/screens/profiledetailes.dart';
 import 'package:signin_signup/screens/profileview.dart';
+import 'package:signin_signup/screens/signup.dart';
 
 
 
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
         MainHomeScreen.id:(context) => MainHomeScreen(),
           HomeLayout.id:(context)=>HomeLayout(),
            profileView.id:(context) => profileView(),
-          profiledetailes.id:(context) => profiledetailes()
-
+          profiledetailes.id:(context) => profiledetailes(),
+          SignUp.id:(context)=>SignUp(),
 
         },
 
