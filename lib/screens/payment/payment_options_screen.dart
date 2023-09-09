@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:signin_signup/screens/payment/cash/cash_wallet_password_view.dart';
 import 'package:signin_signup/screens/payment/payment_cubit.dart';
 import 'package:signin_signup/screens/payment/payment_states.dart';
 
 class PaymentOptionsScreen extends StatelessWidget {
-  const PaymentOptionsScreen({Key? key}) : super(key: key);
+  const PaymentOptionsScreen({Key? key,this.isWallet=0}) : super(key: key);
+
+  final int isWallet;
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +38,10 @@ class PaymentOptionsScreen extends StatelessWidget {
                   thickness: 2,
                 ),
                 const SizedBox(height: 10,),
-                const Text('Payment Options', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                isWallet==0?
+                const Text('Payment Options', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),):Container(),
                 const SizedBox(height: 20,),
+                isWallet==0?
                 SizedBox(
                   height: 50,
                   child: ListView.builder(
@@ -70,10 +75,11 @@ class PaymentOptionsScreen extends StatelessWidget {
                         );
                       },
                   ),
-                ),
+                ):Container(),
                 const SizedBox(height: 40,),
-                const Text('Choose Your Payment Card', style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                PaymentCubit.get(context).paymentView[PaymentCubit.get(context).selectedPaymentOptionIndex],
+                isWallet==0?
+                PaymentCubit.get(context).paymentView[PaymentCubit.get(context).selectedPaymentOptionIndex]:
+                const CashWalletPasswordView(),
               ],
             ),
           ),

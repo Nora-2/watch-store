@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomContainerDetails extends StatelessWidget {
-  const CustomContainerDetails({
+  CustomContainerDetails({
     super.key,
     required this.size,
     required this.text,
+    this.textColor = Colors.white,
   });
 
   final Size size;
   final String text;
+  Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class CustomContainerDetails extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20.0),
           child: Text(
             text,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: textColor),
           ),
         ),
       ),
