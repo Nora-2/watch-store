@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:signin_signup/screens/payment/address_screen.dart';
 import 'package:signin_signup/screens/payment/master_card/card_details_screen.dart';
-import 'package:signin_signup/screens/payment/payment_completed_screen.dart';
 import 'package:signin_signup/wedgites/custom_main_button.dart';
 
-class VisaDetailsScreen extends StatelessWidget {
-  const VisaDetailsScreen({Key? key}) : super(key: key);
-
+class ConfirmScreen extends StatelessWidget {
+  ConfirmScreen({Key? key,this.isVisa=false}) : super(key: key);
+  bool isVisa;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -25,7 +24,7 @@ class VisaDetailsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20,),
-                Image.asset('assets/images/visa_number.png',width: double.infinity,),
+                isVisa?Image.asset('assets/images/visa_number.png',width: double.infinity,):Image.asset('assets/images/cnum1.png',width: double.infinity,),
                 const SizedBox(height: 50,),
                 const Text(
                   'Address',
@@ -92,7 +91,7 @@ class VisaDetailsScreen extends StatelessWidget {
                     text: 'Confirm',
                     textColor: Colors.white,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> CardDetailsScreen(isVisaCard: true,)));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> CardDetailsScreen()));
                     },
                   ),
                 ),
