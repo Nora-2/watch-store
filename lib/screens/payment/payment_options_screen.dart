@@ -8,6 +8,7 @@ class PaymentOptionsScreen extends StatelessWidget {
   const PaymentOptionsScreen({Key? key,this.isWallet=0}) : super(key: key);
 
   final int isWallet;
+  static String id =' paymentoptions';
 
   @override
   Widget build(BuildContext context) {

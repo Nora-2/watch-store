@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:signin_signup/homelayout.dart';
 import 'package:signin_signup/screens/home/main_home_screen.dart';
+import 'package:signin_signup/screens/payment/payment_options_screen.dart';
 
 import 'package:signin_signup/screens/profiledetailes.dart';
 import 'package:signin_signup/screens/profileview.dart';
 import 'package:signin_signup/screens/signup.dart';
-
-
 
 
 import 'cubit_home/homecubit_cubit.dart';
@@ -36,6 +35,7 @@ class MyApp extends StatelessWidget {
            profileView.id:(context) => profileView(),
           profiledetailes.id:(context) => profiledetailes(),
           SignUp.id:(context)=>SignUp(),
+          PaymentOptionsScreen.id:(context)=>PaymentOptionsScreen(),
 
         },
 

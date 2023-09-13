@@ -6,8 +6,7 @@ import 'package:signin_signup/wedgites/custome_cart_item.dart';
 class CartItem extends StatelessWidget {
   CartItem({super.key});
 
-  static List<WatchItem> item = [
-    
+  static List<WatchItem> item = [ 
     WatchItem(
         image: 'assets/images/men_03.png',
         watchName: 'Men\'s analog watch. . .',
