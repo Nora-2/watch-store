@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/homelayout.dart';
-import 'package:signin_signup/screens/home/main_home_screen.dart';
-
-import 'package:signin_signup/screens/profiledetailes.dart';
-import 'package:signin_signup/screens/profileview.dart';
-
-
-
-
-import 'cubit_home/homecubit_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:signin_signup/Features/Splash/presentation/views/splash_screen.dart';
+import 'package:signin_signup/Features/home/presentation/views/main_home_screen.dart';
+import 'package:signin_signup/Features/profile/presentation/views/profiledetailes.dart';
+import 'package:signin_signup/Features/profile/presentation/views/profileview.dart';
+import 'package:signin_signup/core/components/homelayout.dart';
+import 'package:signin_signup/core/cubit_home/homecubit_cubit.dart';
 
 
 void main() {
@@ -33,12 +29,12 @@ class MyApp extends StatelessWidget {
         MainHomeScreen.id:(context) => MainHomeScreen(),
           HomeLayout.id:(context)=>HomeLayout(),
            profileView.id:(context) => profileView(),
-          profiledetailes.id:(context) => profiledetailes()
-
+          profiledetailes.id:(context) => profiledetailes(),
+          SplashScreen.id:(context) => SplashScreen(),
 
         },
 
-        initialRoute:  HomeLayout.id,
+        initialRoute:  SplashScreen.id,
 
        title: 'Watch Store',
       debugShowCheckedModeBanner: false,
