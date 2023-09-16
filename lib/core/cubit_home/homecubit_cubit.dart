@@ -13,7 +13,7 @@ part 'homecubit_state.dart';
 class HomecubitCubit extends Cubit<HomecubitState> {
   HomecubitCubit() : super(HomecubitInitial());
   static HomecubitCubit get(context) => BlocProvider.of(context);
-
+ 
   List<Widget> Screens = [
     MainHomeScreen(),
     products(),

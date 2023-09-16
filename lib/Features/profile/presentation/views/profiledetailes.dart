@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:signin_signup/Features/cart/presentation/views/cart.dart';
 import 'package:signin_signup/Features/profile/presentation/model/user.dart';
 import 'package:signin_signup/Features/profile/presentation/views/profileview.dart';
 
@@ -10,7 +11,7 @@ class profiledetailes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     User user=User(firstName: 'Ahmed', secondName: 'Mohamed', Email: 'ahmed988@gmail.com', Phone: '012727889');
-    
+   
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
@@ -137,10 +138,10 @@ class profiledetailes extends StatelessWidget {
                   ),
                   GestureDetector(
                       onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => profileView()));
+                        // Navigator.pushReplacement(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => profileView()));
                       },
                       child: Text(
                         'My Favorites',
@@ -163,6 +164,11 @@ class profiledetailes extends StatelessWidget {
                   ),
                   GestureDetector(
                       onTap: () {
+                         Navigator.pushNamed(
+                          context,
+                          Cart.id,
+                        
+                        );
                             },
                       child: Text(
                         'My Saves',

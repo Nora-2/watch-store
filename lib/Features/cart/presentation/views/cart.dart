@@ -4,8 +4,8 @@ import 'package:signin_signup/Features/home/data/models/watch_Item_model.dart';
 import 'package:signin_signup/Features/payment/presentation/views/payment_options_screen.dart';
 import 'package:signin_signup/Features/profile/presentation/views/signup.dart';
 import 'package:signin_signup/constants/constants.dart';
+import 'package:signin_signup/core/components/homelayout.dart';
 import 'package:signin_signup/core/widgets/custom_products_list.dart';
-
 
 class Cart extends StatefulWidget {
   const Cart({
@@ -14,6 +14,7 @@ class Cart extends StatefulWidget {
 
   @override
   State<Cart> createState() => _cartState();
+  static String id = 'Cart';
 }
 
 class _cartState extends State<Cart> {
@@ -28,6 +29,7 @@ class _cartState extends State<Cart> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -46,8 +48,7 @@ class _cartState extends State<Cart> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                // ignore: unnecessary_null_comparison
-                child: CartItem.item == null
+                child: CartItem.item.length == 0
                     ? Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -117,7 +118,7 @@ class _cartState extends State<Cart> {
                               padding: const EdgeInsets.all(8.0),
                               child: TextButton(
                                 onPressed: () {
-                                  // Navigator.pushNamed(context, SignUp.id);
+                                  Navigator.pushNamed(context, HomeLayout.id);
                                 },
                                 style: ButtonStyle(
                                   backgroundColor:
