@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/model/watch_Item_model.dart';
-import 'package:signin_signup/screens/home/main_home_screen.dart';
-import 'package:signin_signup/wedgites/custome_cart_item.dart';
+import 'package:signin_signup/Features/home/data/models/watch_Item_model.dart';
+import 'package:signin_signup/core/widgets/custome_cart_item.dart';
+
 
 class CartItem extends StatelessWidget {
   CartItem({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/screens/payment/master_card/card_details_screen.dart';
-import 'package:signin_signup/screens/payment/visa/visa_details_screen.dart';
-import 'package:signin_signup/wedgites/custom_payment_card.dart';
+import 'package:signin_signup/Features/payment/presentation/views/visa/visa_details_screen.dart';
+import 'package:signin_signup/core/widgets/custom_payment_card.dart';
+
 
 class VisaCardView extends StatelessWidget {
   const VisaCardView({Key? key}) : super(key: key);

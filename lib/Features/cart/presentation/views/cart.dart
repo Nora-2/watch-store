@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:signin_signup/Features/cart/presentation/views/cart_items.dart';
+import 'package:signin_signup/Features/home/data/models/watch_Item_model.dart';
+import 'package:signin_signup/Features/payment/presentation/views/payment_options_screen.dart';
+import 'package:signin_signup/Features/profile/presentation/views/signup.dart';
 import 'package:signin_signup/constants/constants.dart';
-import 'package:signin_signup/model/watch_Item_model.dart';
-import 'package:signin_signup/screens/cart/cart_items.dart';
-import 'package:signin_signup/screens/home/category_view/classic_view.dart';
-import 'package:signin_signup/screens/home/category_view/kids_view.dart';
-import 'package:signin_signup/screens/payment/payment_options_screen.dart';
-import 'package:signin_signup/screens/signup.dart';
-import 'package:signin_signup/wedgites/custom_products_list.dart';
-import 'package:signin_signup/wedgites/custome_cart_item.dart';
+import 'package:signin_signup/core/widgets/custom_products_list.dart';
 
-class cart extends StatefulWidget {
-  const cart({
+
+class Cart extends StatefulWidget {
+  const Cart({
     super.key,
   });
 
   @override
-  State<cart> createState() => _cartState();
+  State<Cart> createState() => _cartState();
 }
 
-class _cartState extends State<cart> {
+class _cartState extends State<Cart> {
   @override
   void initState() {
     super.initState();
@@ -48,6 +46,7 @@ class _cartState extends State<cart> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(20.0),
+                // ignore: unnecessary_null_comparison
                 child: CartItem.item == null
                     ? Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -118,7 +117,7 @@ class _cartState extends State<cart> {
                               padding: const EdgeInsets.all(8.0),
                               child: TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(context, SignUp.id);
+                                  // Navigator.pushNamed(context, SignUp.id);
                                 },
                                 style: ButtonStyle(
                                   backgroundColor:

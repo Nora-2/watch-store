@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import 'package:signin_signup/screens/payment/cash/cash_cubit.dart';
-import 'package:signin_signup/screens/payment/cash/cash_states.dart';
-import 'package:signin_signup/screens/payment/payment_completed_screen.dart';
-import 'package:signin_signup/wedgites/custom_main_button.dart';
+import 'package:signin_signup/Features/payment/presentation/views/cash/manger/cash_cubit.dart';
+import 'package:signin_signup/Features/payment/presentation/views/cash/manger/cash_states.dart';
+import 'package:signin_signup/Features/payment/presentation/views/payment_completed_screen.dart';
+import 'package:signin_signup/core/widgets/custom_main_button.dart';
+
 
 class CashWalletPasswordView extends StatefulWidget {
   const CashWalletPasswordView({Key? key}) : super(key: key);

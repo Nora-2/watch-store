@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/screens/payment/payment_cubit.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_cubit.dart';
+
 
 class CustomEditCardTextInfo extends StatelessWidget {
   const CustomEditCardTextInfo({

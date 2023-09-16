@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/screens/payment/address_screen.dart';
-import 'package:signin_signup/screens/payment/payment_completed_screen.dart';
-import 'package:signin_signup/wedgites/custom_main_button.dart';
+import 'package:signin_signup/Features/payment/presentation/views/address_screen.dart';
+import 'package:signin_signup/Features/payment/presentation/views/payment_completed_screen.dart';
+import 'package:signin_signup/core/widgets/custom_main_button.dart';
+
 
 class ByHandView extends StatelessWidget {
   const ByHandView({Key? key}) : super(key: key);

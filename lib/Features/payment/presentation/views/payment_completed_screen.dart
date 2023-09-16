@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/homelayout.dart';
-import 'package:signin_signup/screens/delivery.dart';
-import 'package:signin_signup/wedgites/custom_main_button.dart';
+import 'package:signin_signup/Features/profile/presentation/views/delivery.dart';
+import 'package:signin_signup/core/widgets/custom_main_button.dart';
 
 class PaymentCompletedScreen extends StatelessWidget {
   const PaymentCompletedScreen({Key? key}) : super(key: key);

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:signin_signup/screens/payment/edit_address_screen.dart';
-import 'package:signin_signup/wedgites/custom_container_details.dart';
-import 'package:signin_signup/wedgites/custom_main_button.dart';
+import 'package:signin_signup/Features/payment/presentation/views/edit_address_screen.dart';
+import 'package:signin_signup/core/widgets/custom_container_details.dart';
+import 'package:signin_signup/core/widgets/custom_main_button.dart';
+
 
 class AddressScreen extends StatelessWidget {
   const AddressScreen({Key? key}) : super(key: key);

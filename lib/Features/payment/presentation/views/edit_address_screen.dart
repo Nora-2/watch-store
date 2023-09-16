@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/screens/payment/payment_cubit.dart';
-import 'package:signin_signup/screens/payment/payment_states.dart';
-import 'package:signin_signup/wedgites/custom_edit_card_text_info.dart';
-import 'package:signin_signup/wedgites/custom_main_button.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_cubit.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_states.dart';
+import 'package:signin_signup/core/widgets/custom_edit_card_text_info.dart';
+import 'package:signin_signup/core/widgets/custom_main_button.dart';
 
-class EditCardScreen extends StatefulWidget {
-  const EditCardScreen({Key? key}) : super(key: key);
+class EditAddressScreen extends StatelessWidget {
+  const EditAddressScreen({Key? key}) : super(key: key);
 
-  @override
-  State<EditCardScreen> createState() => _EditCardScreenState();
-}
-
-class _EditCardScreenState extends State<EditCardScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,7 +29,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Card Information',
+                      'Address Information',
                       style: TextStyle(
                           fontWeight: FontWeight.w600,
                           color: Color(0xFF3A3AD3),
@@ -44,7 +39,7 @@ class _EditCardScreenState extends State<EditCardScreen> {
                       height: 40,
                     ),
                     const Text(
-                      'Name on Card',
+                      'User Name',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
@@ -53,14 +48,14 @@ class _EditCardScreenState extends State<EditCardScreen> {
                     CustomEditCardTextInfo(
                       size: size,
                       controller:
-                          PaymentCubit.get(context).nameOnCardController,
+                      PaymentCubit.get(context).nameOnCardController,
                       hintText: 'nameOnCard',
                     ),
                     const SizedBox(
                       height: 14,
                     ),
                     const Text(
-                      'Card Number',
+                      'Phone Number',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
@@ -69,14 +64,14 @@ class _EditCardScreenState extends State<EditCardScreen> {
                     CustomEditCardTextInfo(
                       size: size,
                       controller:
-                          PaymentCubit.get(context).cardNumberController,
+                      PaymentCubit.get(context).phoneNumberController,
                       hintText: 'cardNumber',
                     ),
                     const SizedBox(
                       height: 14,
                     ),
                     const Text(
-                      'Address',
+                      'Address1',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
@@ -90,39 +85,17 @@ class _EditCardScreenState extends State<EditCardScreen> {
                     const SizedBox(
                       height: 14,
                     ),
-                    const Row(
-                      children: [
-                        Text(
-                          'Expiration Date',
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(
-                          width: 70,
-                        ),
-                        Text(
-                          'CVV',
-                          style: TextStyle(fontWeight: FontWeight.w600),
-                        ),
-                      ],
+                    const Text(
+                      'Address2',
+                      style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
                       height: 3,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CustomEditCardTextInfo(
-                          size: size / 2.5,
-                          controller:
-                              PaymentCubit.get(context).expiryDateController,
-                          hintText: 'expiryDate',
-                        ),
-                        CustomEditCardTextInfo(
-                          size: size / 2.5,
-                          controller: PaymentCubit.get(context).cvvController,
-                          hintText: 'cvv',
-                        ),
-                      ],
+                    CustomEditCardTextInfo(
+                      size: size,
+                      controller: PaymentCubit.get(context).address2Controller,
+                      hintText: 'address2',
                     ),
                     const SizedBox(
                       height: 40,
@@ -145,5 +118,6 @@ class _EditCardScreenState extends State<EditCardScreen> {
             ),
           ),
         ));
+
   }
 }

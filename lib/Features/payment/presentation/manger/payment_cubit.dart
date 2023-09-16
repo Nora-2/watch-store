@@ -1,11 +1,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/screens/payment/by_hand/by_hand_view.dart';
-import 'package:signin_signup/screens/payment/cash/cash_phone_number_view.dart';
-import 'package:signin_signup/screens/payment/master_card/master_card_view.dart';
-import 'package:signin_signup/screens/payment/payment_states.dart';
-import 'package:signin_signup/screens/payment/visa/visa_view.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_states.dart';
+import 'package:signin_signup/Features/payment/presentation/views/by_hand/by_hand_view.dart';
+import 'package:signin_signup/Features/payment/presentation/views/cash/views/cash_phone_number_view.dart';
+import 'package:signin_signup/Features/payment/presentation/views/master_card/views/master_card_view.dart';
+import 'package:signin_signup/Features/payment/presentation/views/visa/visa_view.dart';
 
 class PaymentCubit extends Cubit<PaymentStates>{
   PaymentCubit(): super(PaymentInitialState(

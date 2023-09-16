@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/screens/payment/edit_card_screen.dart';
-import 'package:signin_signup/screens/payment/payment_completed_screen.dart';
-import 'package:signin_signup/screens/payment/payment_cubit.dart';
-import 'package:signin_signup/screens/payment/payment_states.dart';
-import 'package:signin_signup/wedgites/custom_container_details.dart';
-import 'package:signin_signup/wedgites/custom_main_button.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_cubit.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_states.dart';
+import 'package:signin_signup/Features/payment/presentation/views/edit_card_screen.dart';
+import 'package:signin_signup/Features/payment/presentation/views/payment_completed_screen.dart';
+import 'package:signin_signup/core/widgets/custom_container_details.dart';
+import 'package:signin_signup/core/widgets/custom_main_button.dart';
 
+
+// ignore: must_be_immutable
 class CardDetailsScreen extends StatefulWidget {
   CardDetailsScreen({Key? key,this.isVisaCard=false}) : super(key: key);
   bool isVisaCard;

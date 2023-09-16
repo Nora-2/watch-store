@@ -1,7 +1,7 @@
 
-import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/screens/payment/cash/cash_states.dart';
+import 'package:signin_signup/Features/payment/presentation/views/cash/manger/cash_states.dart';
 
 class CashCubit extends Cubit<CashStates> {
   CashCubit() : super(CashInitialState());

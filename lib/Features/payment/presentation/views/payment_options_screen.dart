@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:signin_signup/screens/payment/cash/cash_wallet_password_view.dart';
-import 'package:signin_signup/screens/payment/payment_cubit.dart';
-import 'package:signin_signup/screens/payment/payment_states.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_cubit.dart';
+import 'package:signin_signup/Features/payment/presentation/manger/payment_states.dart';
+import 'package:signin_signup/Features/payment/presentation/views/cash/views/cash_wallet_password_view.dart';
+
 
 class PaymentOptionsScreen extends StatelessWidget {
   const PaymentOptionsScreen({Key? key,this.isWallet=0}) : super(key: key);
