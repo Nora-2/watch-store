@@ -5,6 +5,7 @@ import 'package:signin_signup/Features/payment/presentation/views/payment_option
 import 'package:signin_signup/Features/profile/presentation/views/signup.dart';
 import 'package:signin_signup/constants/constants.dart';
 import 'package:signin_signup/core/components/homelayout.dart';
+
 import 'package:signin_signup/core/widgets/custom_products_list.dart';
 
 class Cart extends StatefulWidget {
@@ -48,8 +49,9 @@ class _cartState extends State<Cart> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(20.0),
+
                 child: CartItem.item.length == 0
-                    ? Column(
+? Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset('assets/images/login.jpg'),
