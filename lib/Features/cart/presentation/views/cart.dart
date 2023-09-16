@@ -6,7 +6,6 @@ import 'package:signin_signup/Features/profile/presentation/views/signup.dart';
 import 'package:signin_signup/constants/constants.dart';
 import 'package:signin_signup/core/widgets/custom_products_list.dart';
 
-
 class Cart extends StatefulWidget {
   const Cart({
     super.key,
@@ -72,22 +71,25 @@ class _cartState extends State<Cart> {
                               'You need An Account to Complete Your Shopping',
                               style: TextStyle(fontSize: 10),
                               textAlign: TextAlign.center),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, SignUp.id);
-                            },
-                            child: const Text(
-                              'Create An Account',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w600),
-                            ),
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.black),
-                              foregroundColor:
-                                  MaterialStateProperty.all(Colors.white),
-                              padding: MaterialStateProperty.all(
-                                  EdgeInsets.symmetric(horizontal: 50)),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 16),
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, SignUp.id);
+                              },
+                              child: const Text(
+                                'Create An Account',
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.w600),
+                              ),
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.black),
+                                foregroundColor:
+                                    MaterialStateProperty.all(Colors.white),
+                                padding: MaterialStateProperty.all(
+                                    EdgeInsets.symmetric(horizontal: 50)),
+                              ),
                             ),
                           ),
                           TextButton(
