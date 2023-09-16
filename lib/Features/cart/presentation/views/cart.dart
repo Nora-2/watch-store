@@ -47,7 +47,7 @@ class _cartState extends State<Cart> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 // ignore: unnecessary_null_comparison
-                child: CartItem.item == null
+                child: CartItem.item != null
                     ? Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
