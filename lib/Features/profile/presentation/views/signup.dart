@@ -11,14 +11,19 @@ import 'package:signin_signup/core/widgets/customtxtformfield.dart';
 // ignore: must_be_immutable
 class SignUp extends StatelessWidget {
   SignUp({super.key});
-  TextEditingController FName = new TextEditingController();
-  TextEditingController LName = new TextEditingController();
-  TextEditingController pass = new TextEditingController();
-  TextEditingController phone = new TextEditingController();
-  TextEditingController email = new TextEditingController();
+
+TextEditingController FName  = new TextEditingController();
+TextEditingController LName  = new TextEditingController();
+TextEditingController pass  =  new TextEditingController();
+TextEditingController phone  = new TextEditingController();
+TextEditingController email  = new TextEditingController();
+
+  static String id = 'RegisterPage';
+
   @override
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
+  
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

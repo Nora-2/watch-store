@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:signin_signup/Features/Splash/presentation/views/splash_screen.dart';
 import 'package:signin_signup/Features/home/presentation/views/main_home_screen.dart';
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
           HomeLayout.id:(context)=>HomeLayout(),
            profileView.id:(context) => profileView(),
           profiledetailes.id:(context) => profiledetailes(),
+
           SplashScreen.id:(context) => SplashScreen(),
 
         },
