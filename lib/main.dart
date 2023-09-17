@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,7 +12,9 @@ import 'package:signin_signup/Features/profile/presentation/views/signup.dart';
 import 'package:signin_signup/core/components/homelayout.dart';
 import 'package:signin_signup/core/cubit_home/homecubit_cubit.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

@@ -5,9 +5,9 @@ class User{
   String Phone='01026076471';
   String Password='nwjdowj';
   
-  User({required this.firstName,
-     required secondName,
-     required this.Email,
-    required this.Phone,
-     this.Password='nwjdowj',});
+  User({firstName='Ahmed',
+     this.secondName='Mohamed',
+      this.Email='ahmed81023@gmail.com',
+    this.Phone='01026076471',
+     this.Password='nkjbjk'});
 }

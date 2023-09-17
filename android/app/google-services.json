@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "828860237260",
+    "project_id": "watch-store-9c112",
+    "storage_bucket": "watch-store-9c112.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828860237260:android:9359490222e7ecfe928969",
+        "android_client_info": {
+          "package_name": "com.example.signin_signup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA83OCRzp2jOQ85wuuY28v1NoVfYqWiEYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

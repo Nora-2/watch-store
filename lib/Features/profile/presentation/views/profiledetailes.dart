@@ -5,13 +5,15 @@ import 'package:signin_signup/Features/profile/presentation/views/profileview.da
 
 
 class profiledetailes extends StatelessWidget {
-  const profiledetailes({super.key});
+  const profiledetailes( {super.key});
   static String id = 'profiledetailes';
 
   @override
   Widget build(BuildContext context) {
-    User user=User(firstName: 'Ahmed', secondName: 'Mohamed', Email: 'ahmed988@gmail.com', Phone: '012727889');
-   
+    
+    // User ?user= ModalRoute.of(context)!.settings.arguments as User??User();
+     User user=User();
+ 
     return Scaffold(
       backgroundColor: Colors.black,
       
@@ -34,6 +36,7 @@ class profiledetailes extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
+        
         Container(
             height: 100,
             width: double.infinity,
@@ -208,7 +211,8 @@ class profiledetailes extends StatelessWidget {
               ),
             ]),
           ),
-        )
+        ),
+        
       ]),
     );
   }
