@@ -25,21 +25,22 @@ TextEditingController email  = new TextEditingController();
     final _formKey = GlobalKey<FormState>();
   
     return Scaffold(
+      appBar:  AppBar(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.only(left: 30, right: 420),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.arrow_back),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 30, right: 420),
+            //   child: IconButton(
+            //     onPressed: () {
+            //       Navigator.pop(context);
+            //     },
+            //     icon: Icon(Icons.arrow_back),
+            //   ),
+            // ),
             Lottie.asset(
               'assets/images/login2.json',
               key: Key('${Random().nextInt(999999999)}'),

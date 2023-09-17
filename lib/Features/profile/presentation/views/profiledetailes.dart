@@ -14,6 +14,7 @@ class profiledetailes extends StatelessWidget {
    
     return Scaffold(
       backgroundColor: Colors.black,
+      
       body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         SizedBox(
           height: 10,

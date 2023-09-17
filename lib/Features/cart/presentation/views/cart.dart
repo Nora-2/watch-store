@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:signin_signup/Features/cart/presentation/views/cart_items.dart';
 import 'package:signin_signup/Features/home/data/models/watch_Item_model.dart';
 import 'package:signin_signup/Features/payment/presentation/views/payment_options_screen.dart';
+import 'package:signin_signup/Features/profile/presentation/views/login.dart';
 import 'package:signin_signup/Features/profile/presentation/views/signup.dart';
 import 'package:signin_signup/constants/constants.dart';
 import 'package:signin_signup/core/components/homelayout.dart';
@@ -52,7 +53,7 @@ class _cartState extends State<Cart> {
               Padding(
                 padding: const EdgeInsets.all(20.0),
 
-                child: CartItem.item.length == 0
+                child: CartItem.item.length!= 0
 ? Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -99,7 +100,9 @@ class _cartState extends State<Cart> {
                             ),
                           ),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                 Navigator.pushNamed(context, login.id);
+                              },
                               child: const Text(
                                 'Already Got An Account ?',
                                 style: TextStyle(
@@ -214,8 +217,13 @@ class _cartState extends State<Cart> {
       context: context,
       builder: (BuildContext context) {
         return Container(
+          decoration: new BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: new BorderRadius.only(
+                            topLeft: const Radius.circular(20.0),
+                            topRight: const Radius.circular(20.0))),
           height: 200,
-          color: Colors.white,
+          
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

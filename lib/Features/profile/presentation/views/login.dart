@@ -26,21 +26,22 @@ class login extends StatelessWidget {
 
     final _formKey = GlobalKey<FormState>();
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.only(left: 30, right: 420),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.of(context).popAndPushNamed('HomeLayout');
-                },
-                icon: Icon(Icons.arrow_back),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 30, right: 420),
+            //   child: IconButton(
+            //     onPressed: () {
+            //       Navigator.of(context).popAndPushNamed('HomeLayout');
+            //     },
+            //     icon: Icon(Icons.arrow_back),
+            //   ),
+            // ),
             Lottie.asset(
               'assets/images/login2.json',
               key: Key('${Random().nextInt(999999999)}'),

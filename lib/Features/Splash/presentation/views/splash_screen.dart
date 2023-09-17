@@ -120,14 +120,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) {
-              return HomeLayout();
-            },
-          ),
-        );
+       Navigator.pushNamedAndRemoveUntil(context, HomeLayout.id, (route) => false);
       },
     );
   }

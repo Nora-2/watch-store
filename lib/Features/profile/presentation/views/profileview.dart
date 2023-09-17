@@ -92,12 +92,7 @@ class _profileViewState extends State<profileView> {
                     ),
                   ),
                   keyboardType: TextInputType.text,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
+                  
                 ),
               ),
               SizedBox(
@@ -132,12 +127,7 @@ class _profileViewState extends State<profileView> {
                     ),
                   ),
                   keyboardType: TextInputType.text,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
+                 
                 ),
               ),
               SizedBox(
@@ -172,12 +162,7 @@ class _profileViewState extends State<profileView> {
                     ),
                   ),
                   keyboardType: TextInputType.text,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
+                  
                 ),
               ),
               SizedBox(height: 30),
